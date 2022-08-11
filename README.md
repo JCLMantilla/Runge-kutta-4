@@ -4,4 +4,10 @@ This small project shows some scripting in C++, Python, and some Bash to solve t
 
 initial conditions:
 
-$x(t=0)=v_{x}$
+$x(t=0)=x_{o}$
+$v_{x}(t=0)=v_{xo}$
+
+$y(t=0)=y_{o}$
+$v_{y}(t=0)=v_{yo}$
+
+$\overrightarrow{\mathbf{F}}=-km\vert\vert\mathbf{v}\vert\vert ^n \^{\mathbf{v}} $
