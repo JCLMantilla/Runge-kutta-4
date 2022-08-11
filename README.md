@@ -10,4 +10,4 @@ $v_{x}(t=0)=v_{xo}$
 $y(t=0)=y_{o}$
 $v_{y}(t=0)=v_{yo}$
 
-$$\overrightarrow{\mathbf{F}}=-km\vert\mathbf{\overrightarrow{v}}\vert$$
+$$\overrightarrow{\mathbf{F}}=-km\vert\mathbf{\overrightarrow{v}}\vert ^n$$
