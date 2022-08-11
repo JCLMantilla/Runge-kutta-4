@@ -3,9 +3,9 @@ This small project shows some scripting in C++, Python, and some Bash to solve t
 
 Our equations are subject to the following initial conditions:
 
-$x(t=0)=x_{o} , v_{x}(t=0)=v_{xo}$
+$x(t=0)=x_{o} \; v_{x}(t=0)=v_{xo}$
 
-$y(t=0)=y_{o}, v_{y}(t=0)=v_{yo}$
+$y(t=0)=y_{o} \; v_{y}(t=0)=v_{yo}$
 
 Recall that the force that air resistance oppose to the movement is:
 $$\overrightarrow{\mathbf{F}}=-km||\mathbf{\overrightarrow{v}}||^n \hat{\mathbf{v}}$$
