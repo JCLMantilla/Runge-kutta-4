@@ -11,4 +11,4 @@ $v_{y}(t=0)=v_{yo}$
 
 Recall that the force that air resistance oppose to the movement is
 $$\overrightarrow{\mathbf{F}}=-km||\mathbf{\overrightarrow{v}}||^n \hat{\mathbf{v}}$$
-where $\mathbf{\overrightarrow{v}}=(v_{x},v_{y})$ is the velocity vector of the projectile
+where $m$ is the mass, $k$ is a friction coefficient and $\mathbf{\overrightarrow{v}}=(v_{x},v_{y})$ is the velocity vector of the projectile,
