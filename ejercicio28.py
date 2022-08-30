@@ -7,7 +7,7 @@ data2=np.loadtxt("ejercicio28_sin_friccion.dat")
 
 
 plt.figure()
-plt.plot(data1[:,0], data1[:,1],label="Con friccion")
-plt.plot(data2[:,0], data2[:,1],label="Sin friccion")
+plt.plot(data1[:,0], data1[:,1],label="friction")
+plt.plot(data2[:,0], data2[:,1],label="fricionless")
 plt.legend()
 plt.savefig("ejercicio28.png")
