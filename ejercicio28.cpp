@@ -10,14 +10,14 @@ double fy(double velocidadx, double velocidady);
 
 int main(){
     
-    int n=500; /*Numero de iteracioens para el rk4*/
+    int n=5000; /*Numero de iteracioens para el rk4*/
     rk4(n);
     
     return 0;
 }
 
 void rk4(int n){
-    double h=0.01; /*Sensibilidad del paso del paso*/
+    double h=0.001; /*Sensibilidad del paso del paso*/
     /*Inicializamos las velocidades y las posiciones */
     double *X=new double[n];
     double *Y=new double[n];
@@ -30,7 +30,7 @@ void rk4(int n){
     VX[0]=vx_ini;
     
     double y_ini=0.0;
-    double vy_ini=10.0;
+    double vy_ini=0.0;
     Y[0]=y_ini;
     VY[0]=vy_ini;
     for(int i=0;i<n;i++){
