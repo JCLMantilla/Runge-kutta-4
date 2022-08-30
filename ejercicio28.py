@@ -1,8 +1,8 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-data1=np.loadtxt("ejercicio28.dat")
-data2=np.loadtxt("ejercicio28_sin_friccion.dat")
+data1=np.loadtxt("ejercicio28.dat", encoding='UTF-8')
+data2=np.loadtxt("ejercicio28_sin_friccion.dat", encoding='UTF-8')
 
 
 

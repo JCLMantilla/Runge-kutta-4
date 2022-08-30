@@ -17,7 +17,7 @@ int main(){
 }
 
 void rk4(int n){
-    double h=0.01; /*Sensibilidad del paso del paso*/
+    double h=0.001; /*Sensibilidad del paso del paso*/
     /*Inicializamos las velocidades y las posiciones */
     double *X=new double[n];
     double *Y=new double[n];
@@ -29,7 +29,7 @@ void rk4(int n){
     X[0]=x_ini;
     VX[0]=vx_ini;
     
-    double y_ini=0.0;
+    double y_ini=10.0;
     double vy_ini=10.0;
     Y[0]=y_ini;
     VY[0]=vy_ini;
@@ -71,5 +71,5 @@ double fx(double velocidadx, double velocidady){
     return -0.7*(velocidadx*velocidadx)/sqrt((velocidadx*velocidadx)+(velocidady*velocidady));
 }
 double fy(double velocidadx, double velocidady){
-    return -10+(-0.7*(velocidady*velocidady)/sqrt((velocidadx*velocidadx)+(velocidady*velocidady)));
+    return -10-0.7*(velocidady*velocidady)/sqrt((velocidadx*velocidadx)+(velocidady*velocidady));
 }
