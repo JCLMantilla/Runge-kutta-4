@@ -17,14 +17,14 @@ int main(){
 }
 
 void rk4(int n){
-    double h=0.001; /*Sensibilidad del paso del paso*/
+    double h=0.05; /*Sensibilidad del paso del paso*/
     /*Inicializamos las velocidades y las posiciones */
     double *X=new double[n];
     double *Y=new double[n];
     double *VX=new double[n];
     double *VY=new double[n];   
     /*Condiciones iniciales*/   
-    double x_ini=0.0;
+    double x_ini=1.0;
     double vx_ini=10.0;
     X[0]=x_ini;
     VX[0]=vx_ini;
