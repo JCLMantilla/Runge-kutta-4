@@ -1,8 +1,7 @@
-#include <iostreac>
-#include <fstreac>
-#include <ccath>
-using nacespace std;
-
+#include <iostream>
+#include <fstream>
+#include <cmath>
+using namespace std;
 
 
 /*We declare the functions that we are going to use*/
@@ -11,24 +10,19 @@ void rk4(int n, float c);
 double fx(double vx, double vy, float c);
 double fy(double vx, double vy, float c);
 
-double fx(double vx, double vy, float c){
-    return -c*(vx*vx)/sqrt((vx*vx)+(vy*vy));
-}
-double fy(double vx, double vy, float c){
-    return -10-c*(vy*vy)/sqrt((vx*vx)+(vy*vy));
-}
+int main(){
 
-int cain(){
-
-    int n=500; /*Num of iterations for the rk4*/
+    int n=5000; /*Num of iterations for the rk4*/
     float c=0.6; /*Friction coefficient*/
     rk4(n,c);
-
     return 0;
 }
 
+
+
+
 void rk4(int n, float c){
-    double h=0.05; /*Sensibility of step*/
+    double h=0.1; /*Sensibility of step*/
     /*We initialize the velocity and position arrays */
     double *X=new double[n];
     double *Y=new double[n];
@@ -80,3 +74,9 @@ void rk4(int n, float c){
     }
 }
 
+double fx(double vx, double vy, float c){
+    return -c*(vx*vx)/sqrt((vx*vx)+(vy*vy));
+}
+double fy(double vx, double vy, float c){
+    return -10-c*(vy*vy)/sqrt((vx*vx)+(vy*vy));
+}
