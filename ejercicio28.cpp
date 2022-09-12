@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+
 using namespace std;
 
 
@@ -12,8 +13,8 @@ double fy(double vx, double vy, float c);
 
 int main(){
 
-    int n=5000; /*Num of iterations for the rk4*/
-    float c=0.6; /*Friction coefficient*/
+    int n=200; /*Num of iterations for the rk4*/
+    float c=0.7; /*Friction coefficient*/
     rk4(n,c);
     return 0;
 }
@@ -22,7 +23,7 @@ int main(){
 
 
 void rk4(int n, float c){
-    double h=0.1; /*Sensibility of step*/
+    double h=0.01; /*Sensibility of step*/
     /*We initialize the velocity and position arrays */
     double *X=new double[n];
     double *Y=new double[n];
@@ -68,15 +69,15 @@ void rk4(int n, float c){
     X[i+1]=X[i]+h*(k5x+2*k6x+2*k7x+k8x)/6;
     VX[i+1]=VX[i]+h*(k1x+2*k2x+2*k3x+k4x)/6;
     Y[i+1]=Y[i]+h*(k5y+2*k6y+2*k7y+k8y)/6;
-    VY[i+1]=Y[i]+h*(k1y+2*k2y+2*k3y+k4y)/6;
+    VY[i+1]=VY[i]+h*(k1y+2*k2y+2*k3y+k4y)/6;
     
     std::cout<<X[i]<<" "<<Y[i]<<std::endl;
     }
 }
 
 double fx(double vx, double vy, float c){
-    return -c*(vx*vx)/sqrt((vx*vx)+(vy*vy));
+    return -c*pow(vx,1)*vx/sqrt((vx*vx)+(vy*vy));
 }
 double fy(double vx, double vy, float c){
-    return -10-c*(vy*vy)/sqrt((vx*vx)+(vy*vy));
+    return -9.8-c*pow(vy,1)*vy/sqrt((vx*vx)+(vy*vy));
 }
