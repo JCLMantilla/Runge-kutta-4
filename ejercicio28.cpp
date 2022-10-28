@@ -14,6 +14,7 @@ double fy(double vx, double vy, float c);
 int main(){
 
     int n=200; /*Num of iterations for the rk4*/
+
     float c=0.7; /*Friction coefficient*/
     rk4(n,c);
     return 0;
