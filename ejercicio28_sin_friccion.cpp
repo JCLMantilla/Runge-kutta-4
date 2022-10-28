@@ -13,7 +13,27 @@ double fy(double vx, double vy, float c);
 
 int main(){
 
-    int n=200; /*Num of iterations for the rk4*/
+    //int n=200; /*Num of iterations for the rk4*/
+    int n; /*Num of iterations for the rk4*/
+
+
+    //Opening config file
+    ifstream params_file;
+    params_file.open("params.txt",ios::in);
+    if(!params_file){ /*This verifies if the file can be opened*/
+        cout<<"Error in opening parameters file..";
+        return 0;
+        }
+    params_file >> n; /*Saves the number of iteration*/
+    params_file.close(); /*Closes de file*/
+    //File closed
+
+
+
+
+
+
+
     float c=0.0; /*Friction coefficient*/
     rk4(n,c);
     return 0;
