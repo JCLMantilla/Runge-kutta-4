@@ -1,8 +1,8 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-data1=np.loadtxt("ejercicio28.dat", encoding='UTF-8')
-data2=np.loadtxt("ejercicio28_sin_friccion.dat", encoding='UTF-8')
+data1=np.loadtxt("friction.dat", encoding='UTF-8')
+data2=np.loadtxt("frictionless.dat", encoding='UTF-8')
 
 plt.figure()
 plt.plot(data1[:,0], data1[:,1],label="friction")
