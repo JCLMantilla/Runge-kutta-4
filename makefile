@@ -1,13 +1,13 @@
-ejercicio28.png : ejercicio28.dat ejercicio28_sin_friccion.dat
-	python ejercicio28.py
+plot.png : friction.dat frictionless.dat
+	python plotdata.py
 	
-ejercicio28.dat ejercicio28_sin_friccion.dat : ejercicio28.x ejercicio28_sin_friccion.x
-	./ejercicio28.x > ejercicio28.dat
-	./ejercicio28_sin_friccion.x > ejercicio28_sin_friccion.dat
+friction.dat frictionless.dat : friction.x frictionless.x
+	./friction.x > friction.dat
+	./frictionless.x > frictionless.dat
 
-ejercicio28.x ejercicio28_sin_friccion.x : ejercicio28.cpp ejercicio28_sin_friccion.cpp
-	c++ ejercicio28.cpp -o ejercicio28.x
-	c++ ejercicio28_sin_friccion.cpp -o ejercicio28_sin_friccion.x
+friction.x frictionless.x : friction.cpp frictionless.cpp
+	c++ friction.cpp -o friction.x
+	c++ frictionless.cpp -o frictionless.x
 
 
 
