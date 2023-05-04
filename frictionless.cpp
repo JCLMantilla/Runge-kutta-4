@@ -13,15 +13,14 @@ double fy(double vx, double vy, float c);
 
 int main(){
 
-    //int n=200; /*Num of iterations for the rk4*/
-    int n; /*Num of iterations for the rk4*/
+    int n; /*Max number of iterations for the rk4*/
 
 
-    //Opening config file
+    //Opening params file
     ifstream params_file;
     params_file.open("params.txt",ios::in);
     if(!params_file){ /*This verifies if the file can be opened*/
-        cout<<"Error in opening parameters file..";
+        cout<<"ERROR: could not open params file";
         return 0;
         }
     params_file >> n; /*Saves the number of iteration*/
@@ -61,7 +60,8 @@ void rk4(int n, float c){
     VY[0]=vy_ini;
 
     /*Loop for the RK4*/
-    for(int i=0;i<n;i++){
+    int i=0;
+    while(i<n && Y[i]>0){
 
     /*updates for every step in X and Y*/
     double k1x=fx(VX[i],VY[i], c);
@@ -92,6 +92,7 @@ void rk4(int n, float c){
     VY[i+1]=VY[i]+h*(k1y+2*k2y+2*k3y+k4y)/6;
 
     std::cout<<X[i]<<" "<<Y[i]<<std::endl;
+    i = i + 1;
     }
 }
 
