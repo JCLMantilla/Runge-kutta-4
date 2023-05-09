@@ -20,7 +20,7 @@ int main(){
     ifstream params_file;
     params_file.open("params.txt",ios::in);
     if(!params_file){ /*This verifies if the file can be opened*/
-        cout<<"ERROR: could not open params file";
+        cout<<"ERROR READING PARAMS FILE";
         return 0;
         }
     params_file >> n; /*Saves the number of iteration*/
