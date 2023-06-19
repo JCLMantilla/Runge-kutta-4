@@ -13,6 +13,6 @@ where:
 - $m$ is the mass of the object
 - $k$ is a friction coefficient,
 - $\mathbf{\overrightarrow{v}}=(v_{x},v_{y})$ is the velocity vector of the projectile
-- $k$ is the friction coeficient
+- $k$ is the friction coefficient, which depends on the medium where the object is moving and also it's geometr
 - $n$ is the degree of friction.
 
