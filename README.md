@@ -13,6 +13,10 @@ where:
 - $m$ is the mass of the object
 - $k$ is a friction coefficient,
 - $\mathbf{\overrightarrow{v}}=(v_{x},v_{y})$ is the velocity vector of the projectile
-- $k$ is the friction coefficient, which depends on the medium where the object is moving and also it's geometr
-- $n$ is the degree of friction.
+- $k$ is the friction coefficient, which depends on the medium where the object is moving and also its geometry
+- $n$ is the degree of friction. By convention, 1 is used for low speeds and $n>2$ are used for high speeds. In this case we are using $n=2$ since we will be dealing with speeds of the order of $20 m/S$
+
+## References
+Computational Physics: Problem-Solving with Computers, Rubin H. Landau et al. 
+https://books.google.fr/books/about/Computational_Physics.html?id=RBg-vgAACAAJ&redir_esc=y
 
